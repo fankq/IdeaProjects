@@ -1,0 +1,19 @@
+spring:
+  security:
+    user:
+      name: fankq
+      password: 123456
+  application:
+    name: demo-eureka
+
+eureka:
+  instance:
+      hostname: localhost
+  server:
+    enable-self-preservation: true
+    eviction-interval-timer-in-ms: 60000
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://fankq:123456@localhost:8761/eureka,http://fankq:123456@localhost:8762/eureka/
